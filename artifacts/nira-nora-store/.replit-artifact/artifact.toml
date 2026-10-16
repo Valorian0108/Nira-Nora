@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Nira & Nora"
+description = "An editorial clothing sourcing and shopping experience where customers can purchase confirmed products or enquire about items that still need sourcing."
+version = "1.0.0"
+id = "artifacts/nira-nora-store"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21280
+
+[services.development]
+run = "pnpm --filter @workspace/nira-nora-store run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/nira-nora-store", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/nira-nora-store/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21280"
+BASE_PATH = "/"
