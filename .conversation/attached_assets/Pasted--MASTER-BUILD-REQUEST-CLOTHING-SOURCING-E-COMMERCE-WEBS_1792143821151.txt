@@ -1,0 +1,290 @@
+# MASTER BUILD REQUEST — CLOTHING SOURCING & E-COMMERCE WEBSITE
+
+## 1. Your Role
+
+Act as a senior product designer, UI/UX designer, and frontend engineer.
+
+Help me build a distinctive, polished clothing business website that combines an editorial fashion-brand experience with practical e-commerce functionality.
+
+Do not approach this as a generic online-store template. Think through the product, customer journeys, visual hierarchy, responsive layouts, and future maintainability before implementing anything.
+
+I am not an experienced developer. Explain important decisions in straightforward language, preserve decisions already made, and do not silently invent business requirements.
+
+## 2. The Business Model
+
+This business sources clothing from different suppliers or brands and sells/ships it to customers.
+
+The business may:
+- Sell clothing that is already available.
+- Source clothing from suppliers when customers express interest or place an enquiry.
+- Accept special requests for clothing or services not listed in the standard catalogue.
+
+The exact sourcing arrangement can vary by product and has not been fully settled. The website must support this flexibility without falsely promising availability.
+
+This is a clothing sourcing and retail business. Do not assume that the business manufactures its own clothing, owns every product shown, or offers tailoring and alterations unless that is explicitly confirmed later.
+
+## 3. Purchasing Model — Approved Decision
+
+The website must support two purchasing paths.
+
+### Path A: Confirmed products
+
+Customers can browse products and purchase eligible items directly through the website.
+
+Direct checkout should only be available when the business has confirmed that the product can be supplied.
+
+Product pages should accommodate relevant information such as:
+- Product name and photographs.
+- Price and currency.
+- Available sizes and other variants, where applicable.
+- Availability/fulfilment status.
+- Delivery information.
+- A clear purchase action.
+
+Do not fabricate real products, prices, inventory, delivery promises, or business information. If sample content is needed during development, label it as demonstration content.
+
+### Path B: Special requests and sourcing enquiries
+
+Customers can request an item or service that is not available as a normal, confirmed product.
+
+The initial journey should let customers describe what they want and provide useful details, potentially including:
+- Item or style requested.
+- Size, colour, quantity, or other relevant preferences.
+- Reference image or product link, if supported.
+- Budget, if they wish to provide one.
+- Contact information.
+- Additional notes.
+
+Keep the form approachable. Do not force customers to complete unnecessary fields.
+
+The business reviews the request, checks feasibility and supplier availability, confirms the final price and estimated delivery, and then tells the customer how to proceed with payment.
+
+**Important:** Do not automatically charge customers for unconfirmed special requests. Do not implement automatic deposits or special-request payment rules until those policies are explicitly approved.
+
+## 4. Product Availability — Approved Direction
+
+Design the product system around three working fulfilment statuses.
+
+1. **Ready to order**
+   - Supply has been confirmed.
+   - Eligible for direct checkout.
+
+2. **Sourced on request**
+   - Availability or final pricing needs to be checked.
+   - The customer submits an enquiry instead of paying immediately.
+
+3. **Special request**
+   - The customer wants something outside the standard catalogue.
+   - The customer submits a request for review and quotation.
+
+These are initial working labels. Their final customer-facing wording can be refined later.
+
+Make each status understandable through clear text and actions, not colour alone.
+
+Do not present an unconfirmed item as definitely in stock. Do not promise delivery dates that have not been verified.
+
+## 5. Visual Direction — Very Important
+
+The visual inspiration is an editorial creative-studio website featuring:
+- Oversized, confident typography.
+- Asymmetric compositions and deliberate grid layouts.
+- Generous negative space.
+- Strong, art-directed photography.
+- Restrained colours with selective, vivid accents.
+- Minimal but purposeful navigation.
+- A sense of visual confidence, authorship, and cultural identity.
+
+Adapt the underlying design principles to a clothing brand. Do not copy the reference site's identity or reproduce its layout literally.
+
+The result should feel like a thoughtfully art-directed fashion brand that happens to have excellent shopping functionality, not a generic e-commerce template with fashion photographs added.
+
+### Avoid generic AI design
+
+Do not automatically default to:
+- A predictable centred hero with a gradient background.
+- Repetitive rounded cards for every section.
+- Unnecessary glassmorphism.
+- Excessive gradients, shadows, pills, and decorative borders.
+- Generic stock-photo collages.
+- Arbitrary animations or cursor effects.
+- The same three-column card layout repeated throughout the website.
+- Huge headings without meaningful hierarchy or purpose.
+- Decorative elements that interfere with shopping or readability.
+
+Do not add visual effects merely because they look modern.
+
+Every major visual decision should have a reason connected to the brand, content, or customer journey.
+
+### Art direction is not fully approved yet
+
+The reference establishes an editorial direction, but the precise brand personality, colour palette, typography, logo, imagery, and final art direction have not yet been approved.
+
+Do not pretend these decisions have already been made.
+
+Before building every page in detail, propose a coherent art direction using the established reference and business context. Make provisional decisions where appropriate, clearly identify them as proposals, and avoid locking the project into an identity that would be expensive to change.
+
+Prioritise original composition, appropriate imagery, strong typography, and visual hierarchy over decorative effects.
+
+## 6. Website Structure
+
+Plan the website around these initial areas. Refine the structure if there is a clear reason, but explain significant changes before implementing them.
+
+### Home
+- Establish the brand's identity immediately.
+- Use strong visual storytelling and carefully selected clothing imagery.
+- Give visitors clear routes to browse products and request something specific.
+- Feature selected products or collections.
+- Explain the sourcing/request service without overwhelming the page.
+- Include useful business and contact information.
+
+### Shop
+- Browse the clothing catalogue.
+- Organise products into collections or categories when appropriate.
+- Support useful filtering and sorting as the catalogue grows.
+- Make prices, sizes, product availability, and purchasing actions easy to understand.
+
+### Product detail
+- Present product photography and relevant details.
+- Support sizes, colours, and other variants when relevant.
+- Display the correct fulfilment status.
+- Offer direct checkout only for confirmed products.
+- Direct unconfirmed products toward the appropriate enquiry journey.
+
+### Request an item
+- Let customers request clothing or services outside the standard catalogue.
+- Make the enquiry process clear and easy to complete.
+- Explain that availability, price, and estimated delivery may need to be confirmed.
+
+### About
+- Provide space for the business story, owner introduction, and brand values.
+- Do not invent the owner's story or business credentials.
+
+### Contact and customer information
+- Provide appropriate contact options and social links.
+- Allow space for delivery information, frequently asked questions, and business policies.
+- Do not invent contact details, addresses, or social accounts.
+
+### Cart, checkout, and order confirmation
+- Plan the customer journey for eligible confirmed products.
+- Make totals, delivery charges, and payment expectations clear.
+- Provide useful confirmation and error states.
+- Do not integrate a live payment system or claim payments are functional unless that has actually been implemented and tested.
+
+## 7. Customer Journeys to Design
+
+Map and consider these journeys before finalising the page layouts.
+
+### Journey 1: Buying an available product
+Home → Shop → Product detail → Select available variant → Cart/checkout → Payment → Order confirmation.
+
+### Journey 2: Requesting an unconfirmed product
+Home or Shop → Sourced-on-request product → Enquiry form → Request submitted → Business reviews availability and pricing → Customer receives confirmed quotation and next steps.
+
+### Journey 3: Requesting an unlisted item
+Home → Request an item → Describe the desired item and preferences → Submit enquiry → Business assesses feasibility → Customer receives a response.
+
+### Journey 4: Finding business and delivery information
+Home or product page → Delivery information, FAQs, About, or Contact.
+
+For each journey, consider mobile usability, confusing steps, missing information, validation, successful submission, errors, and what the customer should expect next.
+
+Do not imply that an enquiry is a confirmed order.
+
+## 8. Operational Requirements and Unresolved Decisions
+
+The following have not been finalised:
+- Exact brand name, logo, and brand personality.
+- Exact catalogue categories and initial products.
+- Whether products are held in stock, sourced from suppliers, or both in each case.
+- Delivery regions, delivery prices, and delivery timelines.
+- Returns, exchanges, cancellations, and refund policies.
+- Payment provider and payment configuration.
+- Whether customers need accounts or can check out as guests.
+- How the business will manage products, supplier availability, enquiries, and orders.
+- Whether order tracking is needed at launch.
+- Whether special requests may involve tailoring, alterations, or other custom services.
+
+Do not silently invent these details. Keep the interface flexible enough to accommodate decisions later.
+
+Use clearly marked placeholders for missing business information. Ask me when an unresolved decision materially affects the design or functionality. Otherwise, continue with reversible provisional choices and document them.
+
+## 9. Maintainable Frontend Architecture
+
+Build a frontend that another coding agent can extend without having to redesign everything.
+
+Requirements:
+- Reuse consistent components where repetition is genuinely useful.
+- Define a coherent design-token system for colours, typography, spacing, layout, borders, and motion.
+- Keep content and product data separate from presentation where practical.
+- Avoid scattering business rules throughout unrelated UI components.
+- Use realistic, clearly labelled mock data until a real data source is connected.
+- Keep product availability and purchasing actions driven by explicit product data.
+- Use sensible routes and page boundaries.
+- Make the layout responsive across mobile, tablet, and desktop.
+- Use semantic HTML and accessible interaction patterns.
+- Include loading, empty, error, disabled, and success states where appropriate.
+- Avoid unnecessary dependencies, overengineering, and unrelated refactoring.
+- Do not build fake functionality that looks real but does nothing.
+
+The implementation should be easy to modify as the business and its catalogue evolve.
+
+Do not choose or introduce a complex backend architecture merely to make the frontend appear complete. A later implementation phase will handle the appropriate backend, database, and payment integration.
+
+## 10. Collaboration and Design Review
+
+I want to participate in important product and design decisions. Do not interpret this request as permission to invent every detail independently.
+
+Work in deliberate stages:
+
+**Stage 1 — Product and structure**
+- Summarise the confirmed business requirements.
+- Identify unresolved decisions that materially affect the website.
+- Propose the sitemap and primary customer journeys.
+- Explain any important assumptions.
+
+**Stage 2 — Art direction**
+- Propose a distinctive visual direction that adapts the editorial reference to the clothing business.
+- Explain the proposed typography, colour strategy, imagery, grid, navigation, and interaction style.
+- Identify provisional decisions separately from approved ones.
+- Do not generate multiple generic alternatives just to appear thorough.
+
+**Stage 3 — Initial interface**
+- Build a cohesive first implementation with responsive behaviour and realistic sample content.
+- Focus on the homepage, shop, product detail, and request journey first.
+- Make the primary customer actions work within the frontend prototype.
+- Clearly distinguish simulated behaviour from real backend functionality.
+
+**Stage 4 — Critical review**
+- Inspect the actual running website at desktop and mobile sizes.
+- Evaluate whether it looks generic, whether the visual hierarchy is convincing, whether navigation is clear, and whether customer journeys work.
+- Identify concrete weaknesses rather than simply declaring the design finished.
+
+**Stage 5 — Revision**
+- Correct meaningful problems before treating the interface as ready for handoff.
+- Preserve the established visual direction during revisions.
+- Do not make unrelated redesigns without a reason.
+
+**Stage 6 — Handoff**
+- Document the implemented routes, reusable components, design tokens, mock-data structures, and unfinished functionality.
+- Identify what a separate coding agent must implement for real products, database persistence, order management, enquiries, and payments.
+- List anything that still requires my decision.
+
+## 11. Acceptance Criteria
+
+The initial implementation is not successful merely because it runs or looks attractive in a screenshot.
+
+It should:
+- Have a distinctive and coherent visual identity.
+- Feel intentionally designed rather than assembled from generic AI defaults.
+- Make shopping and special requests easy to understand.
+- Never confuse an enquiry with a confirmed purchase.
+- Respect the confirmed-product checkout rule.
+- Work at mobile and desktop sizes.
+- Have coherent interaction states and meaningful navigation.
+- Use realistic mock data without inventing real business information.
+- Be structured for later functional implementation.
+- Clearly document limitations and remaining decisions.
+
+Start with Stage 1 and Stage 2. Do not rush directly into generating every page before establishing the structure and visual direction. Show me the proposed direction and important assumptions before committing to the full implementation.
+
+The goal is not simply to make a fashionable website. It is to create a distinctive clothing-business experience that customers enjoy using and that the business can realistically operate and expand.
